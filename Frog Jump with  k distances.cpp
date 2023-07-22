@@ -34,7 +34,7 @@ int solveDP(int n, vector<int>& height, vector<int>& dp, int k){
             if(i-j>=0)// Steps must be greater than 1
             {
                 int jump = dp[i-j]+ abs(height[i]- height[i-j]);
-                minSteps= min(jump, mmSteps);//  store min value
+                minSteps= min(jump, minSteps);//  store min value
             }
         }
         dp[i]= minSteps;
